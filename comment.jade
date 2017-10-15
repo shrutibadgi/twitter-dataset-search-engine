@@ -1,0 +1,13 @@
+extends layout
+
+block content
+                 a(href="../textsearch")= "Home"
+                 each result,i in comment
+                 
+                   form#formUserComment(name='commentInsert',method='post',action='/commentresult')
+                     input#inputCommentUser(type="text", name="txtcomment")
+                     input#inputCommentUserId(type="hidden", name="usercommentid", value=result.id)
+                     input#btnSubmit(type="submit", value='Add Comment')
+    
+          
+                

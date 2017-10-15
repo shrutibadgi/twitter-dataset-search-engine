@@ -1,0 +1,26 @@
+extends layout
+
+block content
+            table
+              thead
+                 th FromUserName
+                 th Id
+                 th Tweet
+                 th Text
+              tbody
+              each result, i in searchresult
+                 tr
+                 td
+                   a(href="../comment/#{result.id}" rel=result._id)=""+result.fromUserName
+
+                 td #{result.id}
+
+                 td
+                   label=""+result.fromUser 
+                 td
+                   label=""+result.text
+               a(href="/textsearch")= "Home"
+                 
+                                     
+                       
+
